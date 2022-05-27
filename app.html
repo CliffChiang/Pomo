@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Howera Pomo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        .btn {
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+
+        .alert {
+            margin-left: 5px;
+            margin-right: 5px;
+            text-align: left;
+            border-radius: 0;
+            border-width: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="shadow navbar bg-light sticky-top border border-top-0 border-start-0 border-end-0 border-danger">
+        <div class="container-fluid">
+            <a class="navbar-brand ms-auto me-auto" href="#">
+                <b>Howera</b> Pomo <b class="badge badge-warning text-dark bg-warning">LITE</b>
+            </a>
+        </div>
+    </div><br>
+    <a href="index.html" class="btn btn-danger">
+        < Back to home page</a><br><br>
+            <div class="container pt-3 pb-3 rounded shadow border border-dark">
+                Hi there!<br>
+                <b>Length of Pomo (mins): </b><input type="number" id="pomo_length" class="form-control" value="25"
+                    min="1" max="60">
+                <b>You have </b><br>
+                <span id="hrs" class="display-4">00</span> : <span id="min" class="display-4">00</span> : <span id="sec"
+                    class="display-4">00</span> left for this Pomo.<br>
+                <span id="msg" class="text-danger">Enjoy!</span><br>
+                <br>
+                <a onclick="submit(false)" class="btn btn-success" id="start">Start</a>
+                <!-- Pause -->
+                <a onclick="pause()" class="btn btn-warning" id="pause" style="display: none;">Pause</a>
+                <!-- Resume -->
+                <a onclick="submit(true)" class="btn btn-success" id="resume" style="display: none;">Resume</a>
+                <!-- Reset -->
+                <a onclick="reset()" class="btn btn-danger" id="reset" style="display: none;">Reset</a><br>
+                <br>
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input"><span class="form-check-label">Is this your rest
+                        time? (If so, the time will not be indicated as your work time.)</span>
+                </div>            </div><br>
+            <div class="container pt-3 pb-3 rounded shadow border border-dark">
+                <h4>Statistics</h4>
+                <span class="text-muted">We hope your work time contributes.</span>
+            </div>
+            <br>
+            <div class="bg-danger shadow text-light rounded py-1 px-1">
+                (c) 2020 Howera. All rights reserved.
+            </div><br>
+            <script src="app.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+                crossorigin="anonymous"></script>
+            <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</body>
+
+</html>
